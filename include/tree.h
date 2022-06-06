@@ -48,6 +48,7 @@ class Tree {
         for (size_t i = 0; i < root->leaf.size(); i++)
             per(root->leaf[i], ch);
     }
+ 
  public:
     std::string operator[](int i) const {
         if (i >= changes.size())
