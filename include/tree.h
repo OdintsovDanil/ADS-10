@@ -34,6 +34,7 @@ class Tree {
             buildTree(root->leaf[i], inchar);
         return;
     }
+
     std::vector<std::string> changes;
     void per(Node* root, std::string ch = "") {
         if (root->leaf.size() == 0) {
@@ -48,13 +49,14 @@ class Tree {
         for (size_t i = 0; i < root->leaf.size(); i++)
             per(root->leaf[i], ch);
     }
- 
+
  public:
     std::string operator[](int i) const {
         if (i >= changes.size())
             return "";
         return changes[i];
     }
+
     explicit Tree(std::vector<char> value) {
         root = new Node();
         root->fool = true;
