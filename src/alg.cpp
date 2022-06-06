@@ -12,4 +12,4 @@ std::vector<char> getPerm(const Tree& tree, int n) {
     changes.push_back(first[i]);
   }
   return changes;
-} 
+}
