@@ -1,6 +1,9 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
+#include <vector>
+#include <string>
+#include <iostream>
 
 class Tree {
  private:
@@ -30,7 +33,7 @@ class Tree {
         for (size_t i = 0; i < root->leaf.size(); i++)
             buildTree(root->leaf[i], inchar);
         return;
-    } 
+    }
     std::vector<std::string> changes;
     void per(Node* root, std::string ch = "") {
         if (root->leaf.size() == 0) {
